@@ -21,8 +21,8 @@ public class DemoApplication {
 class HelloDockerRestController {
   @RequestMapping("/hello/{name}")
   public String helloDocker(@PathVariable(value = "name") String name) {
-    String response = "Hello " + name; 
-    //response += " Response received on : " + new Date();
+    String response = String.format("<h1>Hello Mr. %s</h1>", name.toUpperCase()); 
+    response += String.format("<p>Response received on %s: </p>", new Date());
     System.out.println(response);
     return response;
  
