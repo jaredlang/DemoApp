@@ -32,6 +32,7 @@ jobs:
    
   publish: 
     name: Build Docker image and Push to Docker Hub
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
